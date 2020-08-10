@@ -1,5 +1,5 @@
 import express from 'express';
-import bodyParser from "body-parser";
+import bodyParser from 'body-parser';
 import { error404, error500, handle } from './utils/handle.js';
 import handleSortByNameOrDuration from './routeHandlers/sortByNameOrDuration.js';
 import handleGetTrackById from './routeHandlers/getTrackById.js';
@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(error404);
 app.use(error500);
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 3000;
 
 app.get('/tracks', handle(handleGetAllTracks));
 app.get('/tracks/getbyId/:id', handle(handleGetTrackById));
