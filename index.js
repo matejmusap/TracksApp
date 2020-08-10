@@ -1,9 +1,9 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import { error404, error500, handle } from './utils/handle.js';
-import handleSortByNameOrDuration from './routeHandlers/sortByNameOrDuration.js';
-import handleGetTrackById from './routeHandlers/getTrackById.js';
-import handleGetAllTracks from './routeHandlers/getAllTracks.js';
+import { error404, error500, handle } from './src/utils/handle.js';
+import handleSortByNameOrDuration from './src/routeHandlers/sortByNameOrDuration.js';
+import handleGetTrackById from './src/routeHandlers/getTrackById.js';
+import handleGetAllTracks from './src/routeHandlers/getAllTracks.js';
 
 const app = express();
 
