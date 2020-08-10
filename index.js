@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import { error404, error500, handle } from './src/utils/handle.js';
+import handleGet from './src/routeHandlers/get.js';
 import handleSortByNameOrDuration from './src/routeHandlers/sortByNameOrDuration.js';
 import handleGetTrackById from './src/routeHandlers/getTrackById.js';
 import handleGetAllTracks from './src/routeHandlers/getAllTracks.js';
@@ -14,7 +15,8 @@ app.use(error500);
 
 const port = process.env.PORT || 3000;
 
-app.get('/tracks', handleGetAllTracks);
+app.get('/', handle(handleGet));
+app.get('/tracks', handle(handleGetAllTracks));
 app.get('/tracks/getbyId/:id', handle(handleGetTrackById));
 app.get('/tracks/sorted', handle(handleSortByNameOrDuration));
 
