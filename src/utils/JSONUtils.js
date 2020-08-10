@@ -31,4 +31,4 @@ async function sortArrayByDurationOrName(array, value) {
      }
 };
 
-export default {getArrayOfTracks, findTrackInArrayById, sortArrayByDurationOrName};
+export {getArrayOfTracks, findTrackInArrayById, sortArrayByDurationOrName};

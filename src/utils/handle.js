@@ -27,4 +27,4 @@ function badRequest(req, res, message = 'Bad Request') {
   });
 };
 
-export default {handle, error404, error500, badRequest};
+export {handle, error404, error500, badRequest};
