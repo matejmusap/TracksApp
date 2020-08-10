@@ -1,9 +1,9 @@
 import express from 'express';
 import bodyParser from "body-parser";
 import { error404, error500, handle } from './utils/handle.js';
-import { handleSortByNameOrDuration } from './routeHandlers/sortByNameOrDuration.js';
-import { handleGetById } from './routeHandlers/getTrackById.js';
-import { handleGetAllTracks } from './routeHandlers/getAllTracks.js';
+import handleSortByNameOrDuration from './routeHandlers/sortByNameOrDuration.js';
+import handleGetTrackById from './routeHandlers/getTrackById.js';
+import handleGetAllTracks from './routeHandlers/getAllTracks.js';
 
 const app = express();
 
@@ -15,7 +15,7 @@ app.use(error500);
 const port = process.env.PORT || 3000;
 
 app.get('/tracks', handle(handleGetAllTracks));
-app.get('/tracks/getbyId/:id', handle(handleGetById));
+app.get('/tracks/getbyId/:id', handle(handleGetTrackById));
 app.get('/tracks/sorted', handle(handleSortByNameOrDuration));
 
 app.listen(port, () => {
