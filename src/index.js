@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(error404);
 app.use(error500);
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 80;
 
 app.get('/tracks', handle(handleGetAllTracks));
 app.get('/tracks/getbyId/:id', handle(handleGetTrackById));
