@@ -14,7 +14,7 @@ app.use(error500);
 
 const port = process.env.PORT || 3000;
 
-app.get('/tracks', handle(handleGetAllTracks));
+app.get('/tracks', handleGetAllTracks);
 app.get('/tracks/getbyId/:id', handle(handleGetTrackById));
 app.get('/tracks/sorted', handle(handleSortByNameOrDuration));
 
