@@ -1,4 +1,4 @@
-import  { getArrayOfTracks, findTrackInArrayById } from '../utils/JSONUtils';
+import  { getArrayOfTracks, findTrackInArrayById } from '../utils/JSONUtils.js';
 
 async function handleGetById(req, res, _next) {
     const id = req.params.id;

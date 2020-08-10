@@ -1,4 +1,4 @@
-import { getArrayOfTracks, sortArrayByDurationOrName } from '../utils/JSONUtils';
+import { getArrayOfTracks, sortArrayByDurationOrName } from '../utils/JSONUtils.js';
 
 async function handleSortByNameOrDuration(req, res, _next) {
     const sortBy = req.query.sortBy;
