@@ -1,7 +1,7 @@
 import { getArrayOfTracks } from '../utils/JSONUtils.js';
 
-async function handleGetAllTracks(_req, res, _next) {
-    const tracks = await getArrayOfTracks();
+function handleGetAllTracks(_req, res, _next) {
+    const tracks = getArrayOfTracks();
     res.send(tracks);
 }
 

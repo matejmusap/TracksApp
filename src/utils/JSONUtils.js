@@ -1,21 +1,21 @@
 import fs from 'fs';
 
-async function getArrayOfTracks() {
+function getArrayOfTracks() {
     const contents = fs.readFileSync('./src/data/zadatak.json');
-    var jsonContent = await JSON.parse(contents);
+    const jsonContent = JSON.parse(contents);
     return jsonContent.tracks.data;
 };
 
-async function findTrackInArrayById(array, value) {
-    const object = await array.find(o => String(o.id) === value);
+function findTrackInArrayById(array, value) {
+    const object = array.find(o => String(o.id) === value);
     return object;
 };
 
-async function sortArrayByDurationOrName(array, value) {
+function sortArrayByDurationOrName(array, value) {
     if(value === 'name') {
         array.sort((a, b) => { 
-         var nameA = a.title.toUpperCase();
-         var nameB = b.title.toUpperCase();
+         const nameA = a.title.toUpperCase();
+         const nameB = b.title.toUpperCase();
          if (nameA < nameB) {
            return -1;
          }
