@@ -21,8 +21,7 @@ function error500(err, _req, res, _next) {
 
 function badRequest(req, res, message = 'Bad Request') {
   console.log(`400 Bad Request (${req.path}): ${message}`);
-
   res.status(400).send(message);
 };
 
-export {handle, error404, error500, badRequest};
+export { handle, error404, error500, badRequest };

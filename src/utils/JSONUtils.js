@@ -28,10 +28,10 @@ function sortArrayByDurationOrName(array, value) {
      }
      if(value === 'duration') {
         array.sort((a, b) => {
-             return a.duration - b.duration
+             return a.duration - b.duration;
          });
      }
      return array;
 };
 
-export {getArrayOfTracks, findTrackInArrayById, sortArrayByDurationOrName};
+export { getArrayOfTracks, findTrackInArrayById, sortArrayByDurationOrName };
